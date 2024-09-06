@@ -13,4 +13,5 @@ public interface TestService {
 	
 	HashMap<String, Object> updateTest(HashMap<String, Object> map); 
 	
+	HashMap<String, Object> insertTest(HashMap<String, Object> map); 
 }

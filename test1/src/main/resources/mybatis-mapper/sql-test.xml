@@ -4,22 +4,27 @@
 
 <mapper namespace="com.example.test1.mapper.TestMapper">
 	<select id="testList" parameterType="hashmap" resultType="com.example.test1.model.Test">
-		SELECT 
-		* FROM TEST_PRODUCT
+		SELECT *
+		FROM TEST_PRODUCT
 		WHERE PRODUCT_NO = #{productNo}
 	</select>
 	
-	<delete id="deleteList" parameterType="hashmap" resultType="com.example.test1.model.Test">
+	<delete id="deleteList" parameterType="hashmap">
 		DELETE 
 		FROM TEST_PRODUCT
 		WHERE PRODUCT_NO = #{productNo}
 	</delete>
 	
-	<update id="updateList" parameterType="hashmap" resultType="com.example.test1.model.Test">
+	<update id="updateList" parameterType="hashmap">
 		UPDATE TEST_PRODUCT
 		SET PRODUCT_PRICE = #{productPrice}
 		WHERE PRODUCT_NO = #{productNo}
 	</update>
+	
+	<insert id="insertList" parameterType="hashmap">
+		INSERT INTO TEST_PRODUCT 
+		VALUES (PRODUCT_SEQ.NEXTVAL, #{productName}, #{productPrice})
+	</insert>
 	
 	
 </mapper>

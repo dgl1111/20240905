@@ -10,10 +10,12 @@ import com.example.test1.model.Test;
 @Mapper
 public interface TestMapper {
 	
-	 HashMap<String, Object> testList(HashMap<String, Object> map);
+	 Test testList(HashMap<String, Object> map);
 	 
-	 HashMap<String, Object> deleteList(HashMap<String, Object> map);
+	 void deleteList(HashMap<String, Object> map);
 	 
-	 HashMap<String, Object> updateList(HashMap<String, Object> map);
+	 void updateList(HashMap<String, Object> map);
+	 
+	 void insertList(HashMap<String, Object> map);
 	
 }
